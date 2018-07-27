@@ -26,7 +26,9 @@ def create_choice(question, choice_text):
 
 class QuestionVoteViewTests(TestCase):
     """
-    This test will: vote on a choice attached to a question created -> by url 'polls:vote'. Then redirect to 'polls:results' displaying the question, choice and vote that has been incrimented.
+    This test will: vote on a choice attached to a question created -> by url 'polls:vote'.
+    Then redirect to 'polls:results' displaying the question, choice and vote that has been 
+    incrimented.
     """
 
     def test_vote_view_with_voting(self):
@@ -50,7 +52,8 @@ class QuestionVoteViewTests(TestCase):
             fetch_redirect_response=True)
 
     """
-    This test will: Not vote on a choice attached to a question created --> by url 'polls:vote'. Fail, then direct back to 'detail.html' with error message "You forgot to select anything you idiot".
+    This test will: Not vote on a choice attached to a question created --> by url 'polls:vote'. 
+    Fail, then direct back to 'detail.html' with error message "You forgot to select anything you idiot".
     """
 
     def test_vote_view_without_voting(self):
