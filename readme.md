@@ -1,4 +1,4 @@
-# Django views.py testing example
+# Django Testing View Example (vote)
 > Django docs offer a tutorial over testing but lack an example for testing the vote view. I, never had done testing before, once I tackled it, I came up with this.
 
 
