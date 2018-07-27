@@ -5,18 +5,13 @@ from django.utils import timezone
 from ..models import Question, Choice
 from django.urls import reverse
 
-
-def create_question(question_text, days):
-    time = timezone.now() + datetime.timedelta(days=days)
-    return Question.objects.create(question_text=question_text, pub_date=time)
-
-
+# Creates the question used in the test cases.
 def create_current_question(question_text, hours, minutes, seconds):
     time = timezone.now() + datetime.timedelta(hours=hours,
                                                minutes=minutes, seconds=seconds)
     return Question.objects.create(question_text=question_text, pub_date=time)
 
-
+#creates the choice and inserts the question.
 def create_choice(question, choice_text):
     return Choice.objects.create(
         question=question,
