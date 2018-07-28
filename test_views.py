@@ -67,7 +67,6 @@ class QuestionVoteViewTests(TestCase):
             question=question,
             choice_text="Choice for view question")
         url = reverse('polls:vote', kwargs={'question_id': choice.question.id})
-        print('Editing from Vim')
         response = self.client.post(url, follow=True)
         self.assertEqual(response.status_code, 200)
         self.assertContains(
